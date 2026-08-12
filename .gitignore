@@ -1,0 +1,39 @@
+# Secrets - never commit these
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+secrets.json
+
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build output
+dist/
+build/
+out/
+.next/
+.vercel/
+
+# Editor and OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*~
+
+# Logs
+*.log
+npm-debug.log*
+yarn-error.log*
+
+# Solidity tooling (if contracts get added later)
+cache/
+artifacts/
+typechain/
+typechain-types/
+broadcast/

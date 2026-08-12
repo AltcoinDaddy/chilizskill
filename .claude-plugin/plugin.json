@@ -1,0 +1,22 @@
+{
+  "name": "chilizskills",
+  "description": "The missing knowledge between AI agents and production Chiliz Chain. Corrects stale assumptions about Fan Token decimals, the 2,501 gwei gas floor, contract addresses, and tooling before an agent writes Solidity or ships onchain.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Freedom",
+    "email": "akpaenofreedom@gmail.com"
+  },
+  "keywords": [
+    "chiliz",
+    "chz",
+    "fan-tokens",
+    "cap-20",
+    "sportfi",
+    "socios",
+    "solidity",
+    "evm",
+    "web3",
+    "blockchain"
+  ],
+  "skills": ["./"]
+}

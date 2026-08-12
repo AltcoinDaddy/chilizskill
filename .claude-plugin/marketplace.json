@@ -1,0 +1,15 @@
+{
+  "name": "chilizskills",
+  "owner": {
+    "name": "Freedom",
+    "email": "akpaenofreedom@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "chilizskills",
+      "source": "./",
+      "description": "The missing knowledge between AI agents and production Chiliz Chain. Fan Token decimals, gas floor, verified addresses, security, and tooling.",
+      "category": "development"
+    }
+  ]
+}
