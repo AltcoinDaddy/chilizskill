@@ -68,7 +68,9 @@ The official docs currently disagree with themselves. Both of these are live pag
 | [Write a Smart Contract](https://docs.chiliz.com/develop/basics/write-a-smart-contract.md) | Solidity **0.8.30 or lower**, EVM target **`prague`** |
 | [Developers FAQ](https://docs.chiliz.com/develop/developers-faq.md) | Solidity **0.8.24**, EVM **Shanghai** |
 
-The FAQ is the stale page. Prefer the Write a Smart Contract guidance, but **verify by deploying to Spicy first**. Never set `evmVersion` to `cancun`, `default`, or leave it unset while assuming Ethereum parity, because an unsupported opcode fails at deploy time or, worse, at runtime.
+**Verified: `prague` is the right target.** This is no longer a judgement call between two pages. Solidity 0.8.30 with `evmVersion: "prague"` compiles and deploys cleanly to Spicy; the identical source with `evmVersion` left unset fails at deploy with `invalid opcode`, because solc then targets a newer EVM than the chain implements. Confirmed by deploying a CAP-20 token to Spicy (88882) at `0x4a0C49df3e7a0797F7C2355674E72684dC2b475A`, block 37,676,478.
+
+So the FAQ is the stale page, and the fix is to set the target explicitly. Never leave `evmVersion` unset, and never set it to `cancun` or `default` while assuming Ethereum parity: an unsupported opcode fails at deploy time if you are lucky and at runtime if you are not. Re-verify on Spicy after any Chiliz network upgrade, because the correct target moves with the chain.
 
 ```javascript
 // hardhat.config.js

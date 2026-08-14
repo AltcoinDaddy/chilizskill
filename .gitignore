@@ -37,3 +37,6 @@ artifacts/
 typechain/
 typechain-types/
 broadcast/
+
+# Staged for manual deletion (the assistant cannot delete files on this machine)
+_to_delete/

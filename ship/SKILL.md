@@ -55,7 +55,7 @@ Write down your trust assumptions now: PoSA validator set, bridged stablecoins, 
 ```
 
 Checklist:
-- [ ] Hardhat or Remix configured with Solidity 0.8.30 (or lower) and EVM target `prague`
+- [ ] Hardhat or Remix configured with Solidity 0.8.30 (or lower) and EVM target `prague`, set explicitly rather than left to the solc default (verified on Spicy: unset means `invalid opcode` at deploy)
 - [ ] Both `chiliz` (88888) and `spicy` (88882) networks in config
 - [ ] Gas configuration respects the **2,501 gwei minimum**
 - [ ] Test CHZ in your deployer wallet
