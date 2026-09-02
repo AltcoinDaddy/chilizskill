@@ -78,6 +78,10 @@ Read https://<your-domain>/SKILL.md and follow it before writing Solidity or shi
 | [`security/`](./security/SKILL.md) | Chiliz-specific footguns plus the standard EVM pre-deploy checklist. |
 | [`addresses/`](./addresses/SKILL.md) | Verified system, stablecoin, LayerZero, and staking addresses. |
 | [`frontend/`](./frontend/SKILL.md) | Socios Wallet, gas handling in browser, approve flows, pre-publish checklist. |
+| [`layerzero-bridging/`](./layerzero-bridging/SKILL.md) | LayerZero OFT routes, endpoint IDs, peers, delivery, and bridge safety. |
+| [`fanx-defi/`](./fanx-defi/SKILL.md) | FanX liquidity, swaps, thin-pool risk, slippage, and safe pricing. |
+| [`indexing/`](./indexing/SKILL.md) | Historical events, holders, activity feeds, indexers, and reorg handling. |
+| [`testing-qa/`](./testing-qa/SKILL.md) | Spicy-first testing, decimal matrices, gas checks, and release QA. |
 
 ---
 

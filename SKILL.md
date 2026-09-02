@@ -81,6 +81,26 @@ Wallet flows, UX rules, and going to production.
 - Show USD values next to Fan Token amounts, sourced from Pyth.
 - Every onchain button needs its own loader and disabled state. Approve and execute are separate steps.
 
+### [LayerZero & Bridging](./layerzero-bridging/SKILL.md)
+Omnichain Fan Tokens, OFT routes, endpoint IDs, peers, and asynchronous delivery.
+- LayerZero endpoint IDs are not EVM chain IDs; Mainnet is `30409`, Spicy is `40440`.
+- Configure and verify peers on both sides, and expose destination delivery separately from the source transaction.
+
+### [FanX & DeFi](./fanx-defi/SKILL.md)
+FanX liquidity, swaps, thin-pool risk, and safe pricing.
+- FanX spot prices are not safe USD oracles for lending, liquidations, or accounting.
+- Read token decimals and check allowances at runtime; protect swaps with user-visible slippage and minimum-output settings.
+
+### [Indexing](./indexing/SKILL.md)
+Historical events, holders, activity feeds, and indexer design.
+- Use RPC for current state and an indexer for history; do not scan blocks in the browser.
+- Key data by chain ID and contract address, and handle duplicates, reorgs, and indexer lag.
+
+### [Testing & QA](./testing-qa/SKILL.md)
+Spicy-first testing and production release gates.
+- Test both 18-decimal V2 and legacy 0-decimal token behavior, plus wrong-network and delayed-transaction states.
+- Verify addresses, gas-floor handling, approve flows, explorer links, and final production configuration.
+
 ---
 
 ## What to Fetch by Task
@@ -95,7 +115,10 @@ Wallet flows, UX rules, and going to production.
 | Deploying and verifying | `tools/`, `chain-basics/` |
 | Auditing a Chiliz contract | `security/`, `fan-tokens/`, `addresses/` |
 | Choosing whether to use Chiliz at all | `why/` |
-| Bridging or going omnichain | `addresses/`, `tools/` |
+| Bridging or going omnichain | `layerzero-bridging/`, `addresses/`, `tools/` |
+| Integrating FanX or DeFi | `fanx-defi/`, `fan-tokens/`, `security/` |
+| Reading historical activity | `indexing/`, `frontend/` |
+| Testing before deployment | `testing-qa/`, `security/`, `chain-basics/` |
 
 ---
 

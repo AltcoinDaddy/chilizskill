@@ -162,7 +162,7 @@ footer{border-top:1px solid var(--line);padding:44px 0 56px;color:var(--dimmer);
     <div class="nav-links">
       <a href="#wrong">What it gets wrong</a>
       <a href="#skills">Skills</a>
-      <a href="#install">Install</a>
+      <a href="#persistent-setup">Persistent Setup</a>
       <a href="https://docs.chiliz.com">Chiliz docs</a>
     </div>
   </div>
@@ -191,7 +191,7 @@ footer{border-top:1px solid var(--line);padding:44px 0 56px;color:var(--dimmer);
       <code id="p1">Read https://chilizskills.com/SKILL.md and follow it before writing Solidity or shipping anything onchain for Chiliz.</code>
       <button class="copy" data-copy="p1">Copy</button>
     </div>
-    <p class="hero-sub">Per session. To install it once, see <a href="#install">Install</a>. Or <a href="#skills">browse the 9 skills</a>.</p>
+    <p class="hero-sub">Per session. To install it once, see <a href="#persistent-setup">Persistent Setup</a>. Or <a href="#skills">browse the 13 skills</a>.</p>
   </div>
 </header>
 
@@ -251,7 +251,7 @@ footer{border-top:1px solid var(--line);padding:44px 0 56px;color:var(--dimmer);
 
 <section id="skills">
   <div class="wrap">
-    <h2 class="rise">Nine skills. Fetch only what the task needs.</h2>
+    <h2 class="rise">Thirteen skills. Fetch only what the task needs.</h2>
     <p class="sec-lede rise">Each file is standalone and sourced from the Chiliz docs, not from model memory.</p>
 
     <div class="grid">
@@ -303,25 +303,45 @@ footer{border-top:1px solid var(--line);padding:44px 0 56px;color:var(--dimmer);
         <p>Socios Wallet first, gas handling in the browser, approve flows, pre-publish list.</p>
         <div class="skill-actions"><button class="skill-url" data-url="https://chilizskills.com/frontend/SKILL.md">chilizskills.com/frontend/SKILL.md</button><a class="skill-open" href="./frontend/SKILL.md">Open skill</a></div>
       </div>
+      <div class="card w2 rise">
+        <h3>LayerZero &amp; Bridging</h3>
+        <p>OFT routes, endpoint IDs, peer configuration, asynchronous delivery, and bridge safety.</p>
+        <div class="skill-actions"><button class="skill-url" data-url="https://chilizskills.com/layerzero-bridging/SKILL.md">chilizskills.com/layerzero-bridging/SKILL.md</button><a class="skill-open" href="./layerzero-bridging/SKILL.md">Open skill</a></div>
+      </div>
+      <div class="card rise">
+        <h3>FanX &amp; DeFi</h3>
+        <p>FanX liquidity, swaps, thin-pool risk, allowances, slippage, and safe pricing.</p>
+        <div class="skill-actions"><button class="skill-url" data-url="https://chilizskills.com/fanx-defi/SKILL.md">chilizskills.com/fanx-defi/SKILL.md</button><a class="skill-open" href="./fanx-defi/SKILL.md">Open skill</a></div>
+      </div>
+      <div class="card rise">
+        <h3>Indexing</h3>
+        <p>Historical events, holders, activity feeds, indexer choice, pagination, and reorg handling.</p>
+        <div class="skill-actions"><button class="skill-url" data-url="https://chilizskills.com/indexing/SKILL.md">chilizskills.com/indexing/SKILL.md</button><a class="skill-open" href="./indexing/SKILL.md">Open skill</a></div>
+      </div>
+      <div class="card w2 rise">
+        <h3>Testing &amp; QA</h3>
+        <p>Spicy-first testing, decimal matrices, gas-floor checks, address verification, and release gates.</p>
+        <div class="skill-actions"><button class="skill-url" data-url="https://chilizskills.com/testing-qa/SKILL.md">chilizskills.com/testing-qa/SKILL.md</button><a class="skill-open" href="./testing-qa/SKILL.md">Open skill</a></div>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="install">
+<section id="persistent-setup">
   <div class="wrap">
-    <h2 class="rise">Install it once.</h2>
-    <p class="sec-lede rise">Optional. The prompt above works every session without any setup.</p>
+    <h2 class="rise">Persistent Setup</h2>
+    <p class="sec-lede rise">Optional. Configure your agent once, or use the prompt above for a single session.</p>
 
     <div class="install rise">
-      <div class="rail" role="tablist" aria-label="Install method">
-        <button id="tab-cc" role="tab" aria-selected="true" aria-controls="pane-cc" data-tab="cc"><b>Claude Code</b><i>Plugin, user-wide</i></button>
+      <div class="rail" role="tablist" aria-label="Persistent setup method">
+        <button id="tab-cx" role="tab" aria-selected="true" aria-controls="pane-cx" data-tab="cx"><b>Codex</b><i>AGENTS.md, per repo</i></button>
         <button id="tab-cur" role="tab" aria-selected="false" aria-controls="pane-cur" data-tab="cur"><b>Cursor</b><i>Rule, per repo</i></button>
-        <button id="tab-cx" role="tab" aria-selected="false" aria-controls="pane-cx" data-tab="cx"><b>Codex</b><i>AGENTS.md, per repo</i></button>
+        <button id="tab-cc" role="tab" aria-selected="false" aria-controls="pane-cc" data-tab="cc"><b>Claude Code</b><i>Plugin, user-wide</i></button>
         <button id="tab-sh" role="tab" aria-selected="false" aria-controls="pane-sh" data-tab="sh"><b>Scripts</b><i>Fetch and bake</i></button>
       </div>
 
       <div>
-        <div class="pane" id="pane-cc" role="tabpanel" aria-labelledby="tab-cc" aria-hidden="false" data-pane="cc" data-on="1">
+        <div class="pane" id="pane-cc" role="tabpanel" aria-labelledby="tab-cc" aria-hidden="true" data-pane="cc">
           <h3>Add the marketplace, then install</h3>
           <p class="note">Each topic loads as its own skill with its own trigger, so writing a staking contract pulls in Fan Tokens and Security without loading the rest.</p>
           <div class="block"><span class="k">/plugin</span> marketplace add austintgriffith/chilizskills</div>
@@ -341,7 +361,7 @@ Tokens, or building a dApp frontend for Chiliz Chain, read
 https://chilizskills.com/SKILL.md and follow it.</div>
         </div>
 
-        <div class="pane" id="pane-cx" role="tabpanel" aria-labelledby="tab-cx" aria-hidden="true" data-pane="cx">
+        <div class="pane" id="pane-cx" role="tabpanel" aria-labelledby="tab-cx" aria-hidden="false" data-pane="cx" data-on="1">
           <h3>Put this in AGENTS.md at your repo root</h3>
           <p class="note">Codex fetches chilizskills on each task.</p>
           <div class="block">Read https://chilizskills.com/SKILL.md and follow it before
