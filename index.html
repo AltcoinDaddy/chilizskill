@@ -25,7 +25,7 @@ body{
   font-family:var(--mono); font-size:15px; line-height:1.65;
   -webkit-font-smoothing:antialiased;
 }
-.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+.wrap{max-width:var(--wrap);min-width:0;margin:0 auto;padding:0 24px}
 a{color:inherit;text-decoration:none}
 ::selection{background:var(--accent);color:#09090b}
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
@@ -44,7 +44,7 @@ nav{position:sticky;top:0;z-index:20;height:64px;display:flex;align-items:center
 /* hero */
 header{min-height:calc(100dvh - 64px);display:flex;align-items:center;padding:48px 0 64px}
 .banner{color:var(--accent);font-size:clamp(5px,1.42vw,15px);line-height:1.08;
-  white-space:pre;overflow:hidden;margin-bottom:38px}
+  white-space:pre;max-width:100%;overflow:hidden;margin-bottom:38px}
 h1{font-size:clamp(28px,4.6vw,54px);line-height:1.1;letter-spacing:-.02em;font-weight:700;
   max-width:19ch;margin-bottom:22px}
 h1 em{font-style:normal;color:var(--accent)}
@@ -100,6 +100,13 @@ h2{font-size:clamp(22px,3vw,34px);line-height:1.15;letter-spacing:-.015em;font-w
 .card h3{font-size:16px;font-weight:700;margin-bottom:8px;display:flex;align-items:baseline;gap:10px}
 .card h3 span{font-size:11px;color:var(--dimmer);font-weight:400;letter-spacing:.04em}
 .card p{color:var(--dim);font-size:13.5px;line-height:1.6}
+.skill-actions{display:flex;align-items:center;gap:12px;margin-top:18px;flex-wrap:wrap}
+.skill-url,.skill-open{font-family:inherit;font-size:11px;line-height:1.4}
+.skill-url{border:1px solid var(--line-2);border-radius:var(--radius);background:transparent;color:var(--dim);padding:7px 9px;cursor:pointer;text-align:left;transition:.16s ease}
+.skill-url:hover{color:var(--fg);border-color:var(--accent);background:var(--panel-2)}
+.skill-url[data-done="1"]{color:#4ec98a;border-color:#4ec98a}
+.skill-open{color:var(--dimmer);border-bottom:1px solid var(--line-2);padding-bottom:2px}
+.skill-open:hover{color:var(--accent);border-color:var(--accent)}
 .card.lead{background:linear-gradient(0deg,var(--panel),var(--panel));border-color:var(--line-2)}
 .card.lead h3{color:var(--accent)}
 @media(max-width:900px){.grid{grid-template-columns:1fr}.card.w2{grid-column:span 1}}
@@ -248,45 +255,54 @@ footer{border-top:1px solid var(--line);padding:44px 0 56px;color:var(--dimmer);
     <p class="sec-lede rise">Each file is standalone and sourced from the Chiliz docs, not from model memory.</p>
 
     <div class="grid">
-      <a class="card lead w2 rise" href="./ship/SKILL.md">
+      <div class="card lead w2 rise">
         <h3>Ship <span>START HERE</span></h3>
         <p>Idea to deployed dApp, phase by phase. Routes you through every other skill in order, from chain fit through mainnet verification.</p>
-      </a>
-      <a class="card rise" href="./SKILL.md">
+        <div class="skill-actions"><button class="skill-url" data-url="https://chilizskills.com/ship/SKILL.md">chilizskills.com/ship/SKILL.md</button><a class="skill-open" href="./ship/SKILL.md">Open skill</a></div>
+      </div>
+      <div class="card rise">
         <h3>Router <span>SKILL.md</span></h3>
         <p>The entry point. Five corrections up front, then the index and a fetch-by-task table.</p>
-      </a>
+        <div class="skill-actions"><button class="skill-url" data-url="https://chilizskills.com/SKILL.md">chilizskills.com/SKILL.md</button><a class="skill-open" href="./SKILL.md">Open skill</a></div>
+      </div>
 
-      <a class="card w2 rise" href="./fan-tokens/SKILL.md">
+      <div class="card w2 rise">
         <h3>Fan Tokens <span>CAP-20</span></h3>
         <p>The decimal migration in full, verified V2 addresses for the majors, staking contracts, wCHZ, and why you cannot mint an official Fan Token.</p>
-      </a>
-      <a class="card rise" href="./chain-basics/SKILL.md">
+        <div class="skill-actions"><button class="skill-url" data-url="https://chilizskills.com/fan-tokens/SKILL.md">chilizskills.com/fan-tokens/SKILL.md</button><a class="skill-open" href="./fan-tokens/SKILL.md">Open skill</a></div>
+      </div>
+      <div class="card rise">
         <h3>Chain basics</h3>
         <p>RPC, chain IDs, the gas floor, compiler targets, PoSA, epochs, faucets.</p>
-      </a>
+        <div class="skill-actions"><button class="skill-url" data-url="https://chilizskills.com/chain-basics/SKILL.md">chilizskills.com/chain-basics/SKILL.md</button><a class="skill-open" href="./chain-basics/SKILL.md">Open skill</a></div>
+      </div>
 
-      <a class="card rise" href="./why/SKILL.md">
+      <div class="card rise">
         <h3>Why Chiliz</h3>
         <p>When it is the right chain and when it is not. Honest tradeoffs, no cheerleading.</p>
-      </a>
-      <a class="card w2 rise" href="./security/SKILL.md">
+        <div class="skill-actions"><button class="skill-url" data-url="https://chilizskills.com/why/SKILL.md">chilizskills.com/why/SKILL.md</button><a class="skill-open" href="./why/SKILL.md">Open skill</a></div>
+      </div>
+      <div class="card w2 rise">
         <h3>Security</h3>
         <p>Decimals bugs, gas as a liveness failure, thin-liquidity oracle manipulation, PoSA trust assumptions, bridged asset risk, plus the standard EVM pre-deploy checklist.</p>
-      </a>
+        <div class="skill-actions"><button class="skill-url" data-url="https://chilizskills.com/security/SKILL.md">chilizskills.com/security/SKILL.md</button><a class="skill-open" href="./security/SKILL.md">Open skill</a></div>
+      </div>
 
-      <a class="card rise" href="./addresses/SKILL.md">
+      <div class="card rise">
         <h3>Addresses</h3>
         <p>System contracts, stablecoins, LayerZero endpoints. All checksum verified.</p>
-      </a>
-      <a class="card rise" href="./tools/SKILL.md">
+        <div class="skill-actions"><button class="skill-url" data-url="https://chilizskills.com/addresses/SKILL.md">chilizskills.com/addresses/SKILL.md</button><a class="skill-open" href="./addresses/SKILL.md">Open skill</a></div>
+      </div>
+      <div class="card rise">
         <h3>Tools</h3>
         <p>Hardhat, Remix, verification quirks, Pyth, LayerZero, indexers, FanX.</p>
-      </a>
-      <a class="card rise" href="./frontend/SKILL.md">
+        <div class="skill-actions"><button class="skill-url" data-url="https://chilizskills.com/tools/SKILL.md">chilizskills.com/tools/SKILL.md</button><a class="skill-open" href="./tools/SKILL.md">Open skill</a></div>
+      </div>
+      <div class="card rise">
         <h3>Frontend</h3>
         <p>Socios Wallet first, gas handling in the browser, approve flows, pre-publish list.</p>
-      </a>
+        <div class="skill-actions"><button class="skill-url" data-url="https://chilizskills.com/frontend/SKILL.md">chilizskills.com/frontend/SKILL.md</button><a class="skill-open" href="./frontend/SKILL.md">Open skill</a></div>
+      </div>
     </div>
   </div>
 </section>
@@ -298,21 +314,21 @@ footer{border-top:1px solid var(--line);padding:44px 0 56px;color:var(--dimmer);
 
     <div class="install rise">
       <div class="rail" role="tablist" aria-label="Install method">
-        <button role="tab" aria-selected="true" data-tab="cc"><b>Claude Code</b><i>Plugin, user-wide</i></button>
-        <button role="tab" aria-selected="false" data-tab="cur"><b>Cursor</b><i>Rule, per repo</i></button>
-        <button role="tab" aria-selected="false" data-tab="cx"><b>Codex</b><i>AGENTS.md, per repo</i></button>
-        <button role="tab" aria-selected="false" data-tab="sh"><b>Scripts</b><i>Fetch and bake</i></button>
+        <button id="tab-cc" role="tab" aria-selected="true" aria-controls="pane-cc" data-tab="cc"><b>Claude Code</b><i>Plugin, user-wide</i></button>
+        <button id="tab-cur" role="tab" aria-selected="false" aria-controls="pane-cur" data-tab="cur"><b>Cursor</b><i>Rule, per repo</i></button>
+        <button id="tab-cx" role="tab" aria-selected="false" aria-controls="pane-cx" data-tab="cx"><b>Codex</b><i>AGENTS.md, per repo</i></button>
+        <button id="tab-sh" role="tab" aria-selected="false" aria-controls="pane-sh" data-tab="sh"><b>Scripts</b><i>Fetch and bake</i></button>
       </div>
 
       <div>
-        <div class="pane" data-pane="cc" data-on="1">
+        <div class="pane" id="pane-cc" role="tabpanel" aria-labelledby="tab-cc" aria-hidden="false" data-pane="cc" data-on="1">
           <h3>Add the marketplace, then install</h3>
           <p class="note">Each topic loads as its own skill with its own trigger, so writing a staking contract pulls in Fan Tokens and Security without loading the rest.</p>
           <div class="block"><span class="k">/plugin</span> marketplace add austintgriffith/chilizskills</div>
           <div class="block"><span class="k">/plugin</span> install chilizskills@chilizskills</div>
         </div>
 
-        <div class="pane" data-pane="cur">
+        <div class="pane" id="pane-cur" role="tabpanel" aria-labelledby="tab-cur" aria-hidden="true" data-pane="cur">
           <h3>Create .cursor/rules/chilizskills.mdc</h3>
           <p class="note">Cursor fetches the pack when the rule fires.</p>
           <div class="block"><span class="c">---
@@ -325,14 +341,14 @@ Tokens, or building a dApp frontend for Chiliz Chain, read
 https://chilizskills.com/SKILL.md and follow it.</div>
         </div>
 
-        <div class="pane" data-pane="cx">
+        <div class="pane" id="pane-cx" role="tabpanel" aria-labelledby="tab-cx" aria-hidden="true" data-pane="cx">
           <h3>Put this in AGENTS.md at your repo root</h3>
           <p class="note">Codex fetches chilizskills on each task.</p>
           <div class="block">Read https://chilizskills.com/SKILL.md and follow it before
 writing Solidity or shipping anything onchain for Chiliz.</div>
         </div>
 
-        <div class="pane" data-pane="sh">
+        <div class="pane" id="pane-sh" role="tabpanel" aria-labelledby="tab-sh" aria-hidden="true" data-pane="sh">
           <h3>Embed it in a pipeline or system prompt</h3>
           <p class="note">Every skill is plain markdown at a predictable path.</p>
           <div class="block"><span class="k">curl</span> -s https://chilizskills.com/SKILL.md</div>
@@ -360,10 +376,27 @@ writing Solidity or shipping anything onchain for Chiliz.</div>
   </div>
 </section>
 
+<section id="contributing">
+  <div class="wrap">
+    <h2 class="rise">Contributing</h2>
+    <p class="sec-lede rise">Chiliz facts change. Humans and agents are welcome to correct, improve, and extend this knowledge pack.</p>
+    <div class="block rise">Open an issue for a stale fact or a missing topic, then send a focused pull request with a primary source and a command that verifies the claim.</div>
+    <p class="hero-sub"><a href="https://github.com/austintgriffith/chilizskills/issues">Open an issue</a> or <a href="https://github.com/austintgriffith/chilizskills/pulls">review the pull requests</a>.</p>
+  </div>
+</section>
+
+<section id="feedback">
+  <div class="wrap">
+    <h2 class="rise">Feedback</h2>
+    <p class="sec-lede rise">If a skill confused you, slowed you down, or helped you ship on Chiliz, share the signal so the pack can get sharper.</p>
+    <p class="hero-sub"><a href="https://github.com/austintgriffith/chilizskills/issues/new">Send feedback on GitHub</a>.</p>
+  </div>
+</section>
+
 <footer>
   <div class="wrap foot">
     <span>MIT licensed. Format borrowed from <a href="https://ethskills.com">ethskills</a>.</span>
-    <span>Something wrong or missing? <a href="https://github.com/">Open a PR</a>.</span>
+    <span>Something wrong or missing? <a href="https://github.com/austintgriffith/chilizskills/issues">Open an issue</a> or <a href="https://github.com/austintgriffith/chilizskills/pulls">open a PR</a>.</span>
   </div>
 </footer>
 
@@ -381,12 +414,24 @@ document.querySelectorAll('.copy').forEach(function(btn){
     }else{fallback(text,done)}
   });
 });
+document.querySelectorAll('.skill-url').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var text=btn.dataset.url;
+    var done=function(){
+      btn.textContent='Copied';btn.dataset.done='1';
+      setTimeout(function(){btn.textContent=text.replace('https://','');btn.dataset.done='';},1900);
+    };
+    if(navigator.clipboard&&window.isSecureContext){
+      navigator.clipboard.writeText(text).then(done).catch(function(){fallback(text,done)});
+    }else{fallback(text,done)}
+  });
+});
 function fallback(text,cb){
   var t=document.createElement('textarea');
   t.value=text;t.setAttribute('readonly','');
   t.style.cssText='position:absolute;left:-9999px';
   document.body.appendChild(t);t.select();
-  try{document.execCommand('copy');cb()}catch(e){}
+    try{if(document.execCommand('copy')){cb()}}catch(e){}
   document.body.removeChild(t);
 }
 
@@ -396,8 +441,18 @@ rail.forEach(function(b){
     rail.forEach(function(x){x.setAttribute('aria-selected','false')});
     b.setAttribute('aria-selected','true');
     document.querySelectorAll('.pane').forEach(function(p){
-      p.dataset.on = (p.dataset.pane===b.dataset.tab)?'1':'';
+      var active=p.dataset.pane===b.dataset.tab;
+      p.dataset.on = active?'1':'';
+      p.setAttribute('aria-hidden',active?'false':'true');
     });
+  });
+  b.addEventListener('keydown',function(e){
+    var i=Array.prototype.indexOf.call(rail,b), next;
+    if(e.key==='ArrowRight'||e.key==='ArrowDown') next=rail[(i+1)%rail.length];
+    if(e.key==='ArrowLeft'||e.key==='ArrowUp') next=rail[(i-1+rail.length)%rail.length];
+    if(e.key==='Home') next=rail[0];
+    if(e.key==='End') next=rail[rail.length-1];
+    if(next){e.preventDefault();next.focus();next.click()}
   });
 });
 
