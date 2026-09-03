@@ -1,6 +1,6 @@
 ---
 name: chiliz-security
-description: Security patterns and vulnerabilities specific to Chiliz Chain smart contracts: Fan Token decimals bugs, gas floor liveness failures, thin liquidity oracle manipulation, PoSA trust assumptions, plus the standard EVM pre-deploy checklist. Use before deploying any contract to Chiliz Chain or when auditing a Chiliz contract.
+description: "Security patterns and vulnerabilities specific to Chiliz Chain smart contracts: Fan Token decimals bugs, gas floor liveness failures, thin liquidity oracle manipulation, PoSA trust assumptions, plus the standard EVM pre-deploy checklist. Use before deploying any contract to Chiliz Chain or when auditing a Chiliz contract."
 ---
 
 # Chiliz Chain Security

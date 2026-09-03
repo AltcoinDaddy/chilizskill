@@ -101,6 +101,11 @@ Spicy-first testing and production release gates.
 - Test both 18-decimal V2 and legacy 0-decimal token behavior, plus wrong-network and delayed-transaction states.
 - Verify addresses, gas-floor handling, approve flows, explorer links, and final production configuration.
 
+### [Wallets](./wallets/SKILL.md)
+Socios Wallet, Reown, network switching, approvals, and fan-friendly transaction UX.
+- Support Socios Wallet, not only MetaMask, and make Mainnet versus Spicy unmistakable.
+- Treat connect, approve, execute, pending, rejected, reverted, and delayed states as separate UX states.
+
 ---
 
 ## What to Fetch by Task
@@ -119,6 +124,7 @@ Spicy-first testing and production release gates.
 | Integrating FanX or DeFi | `fanx-defi/`, `fan-tokens/`, `security/` |
 | Reading historical activity | `indexing/`, `frontend/` |
 | Testing before deployment | `testing-qa/`, `security/`, `chain-basics/` |
+| Connecting wallets or designing transaction UX | `wallets/`, `frontend/`, `chain-basics/` |
 
 ---
 

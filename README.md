@@ -82,6 +82,7 @@ Read https://<your-domain>/SKILL.md and follow it before writing Solidity or shi
 | [`fanx-defi/`](./fanx-defi/SKILL.md) | FanX liquidity, swaps, thin-pool risk, slippage, and safe pricing. |
 | [`indexing/`](./indexing/SKILL.md) | Historical events, holders, activity feeds, indexers, and reorg handling. |
 | [`testing-qa/`](./testing-qa/SKILL.md) | Spicy-first testing, decimal matrices, gas checks, and release QA. |
+| [`wallets/`](./wallets/SKILL.md) | Socios Wallet, Reown, network switching, approvals, and transaction UX. |
 
 ---
 

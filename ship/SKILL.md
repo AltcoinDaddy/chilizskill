@@ -1,6 +1,6 @@
 ---
 name: chiliz-ship
-description: End-to-end guide for taking a Chiliz Chain dApp from idea to production: scoping, chain fit, contract design, Spicy testnet workflow, mainnet deploy, verification, and launch checklist. Fetch this first when building anything on Chiliz Chain; it routes through all other chilizskills skills in order.
+description: "End-to-end guide for taking a Chiliz Chain dApp from idea to production: scoping, chain fit, contract design, Spicy testnet workflow, mainnet deploy, verification, and launch checklist. Fetch this first when building anything on Chiliz Chain; it routes through all other chilizskills skills in order."
 ---
 
 # Ship a Chiliz Chain dApp

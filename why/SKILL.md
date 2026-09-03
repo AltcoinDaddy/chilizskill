@@ -1,6 +1,6 @@
 ---
 name: why-chiliz
-description: When Chiliz Chain is the right chain for a project and when it is not: SportFi positioning, the licensed IP and fan distribution moat, honest tradeoffs versus Ethereum and L2s, PoSA decentralization limits, and matching use cases to the chain's strengths. Use when choosing a chain, evaluating whether to build on Chiliz, or countering stale claims about it.
+description: "When Chiliz Chain is the right chain for a project and when it is not: SportFi positioning, the licensed IP and fan distribution moat, honest tradeoffs versus Ethereum and L2s, PoSA decentralization limits, and matching use cases to the chain's strengths. Use when choosing a chain, evaluating whether to build on Chiliz, or countering stale claims about it."
 ---
 
 # Why Chiliz Chain (and When Not To)

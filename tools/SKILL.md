@@ -1,6 +1,6 @@
 ---
 name: chiliz-tools
-description: Development tooling that actually works on Chiliz Chain: Hardhat, Remix, Foundry, thirdweb, contract verification on Chiliscan and Blockscout, Pyth oracles and entropy, LayerZero OFT, Biconomy account abstraction, Moralis Tatum Nodit data APIs, The Graph Goldsky Envio indexing, Reown wallet connection, Aragon DAOs. Use when choosing or configuring tooling for a Chiliz Chain project.
+description: "Development tooling that actually works on Chiliz Chain: Hardhat, Remix, Foundry, thirdweb, contract verification on Chiliscan and Blockscout, Pyth oracles and entropy, LayerZero OFT, Biconomy account abstraction, Moralis Tatum Nodit data APIs, The Graph Goldsky Envio indexing, Reown wallet connection, Aragon DAOs. Use when choosing or configuring tooling for a Chiliz Chain project."
 ---
 
 # Chiliz Chain Tooling

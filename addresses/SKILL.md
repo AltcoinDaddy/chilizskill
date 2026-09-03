@@ -1,6 +1,6 @@
 ---
 name: chiliz-addresses
-description: Verified contract addresses on Chiliz Chain Mainnet (88888) and Spicy Testnet (88882): system contracts for staking, governance and chain config, Multicall, stablecoins USDC USDT AUSD0 BRZ, LayerZero endpoints, Fan Token staking, and Pepper. Use whenever code needs a contract address on Chiliz Chain, to avoid hallucinated addresses.
+description: "Verified contract addresses on Chiliz Chain Mainnet (88888) and Spicy Testnet (88882): system contracts for staking, governance and chain config, Multicall, stablecoins USDC USDT AUSD0 BRZ, LayerZero endpoints, Fan Token staking, and Pepper. Use whenever code needs a contract address on Chiliz Chain, to avoid hallucinated addresses."
 ---
 
 # Chiliz Chain Contract Addresses

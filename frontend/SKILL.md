@@ -1,6 +1,6 @@
 ---
 name: chiliz-frontend
-description: Frontend and UX rules for Chiliz Chain dApps: Socios.com Wallet integration via Reown, wallet connection, network switching for chain 88888 and 88882, gas price handling in the browser, Fan Token decimals in the UI, USD values from Pyth, approve/execute flows, and a pre-publish checklist. Use when building or reviewing the UI of a Chiliz dApp.
+description: "Frontend and UX rules for Chiliz Chain dApps: Socios.com Wallet integration via Reown, wallet connection, network switching for chain 88888 and 88882, gas price handling in the browser, Fan Token decimals in the UI, USD values from Pyth, approve/execute flows, and a pre-publish checklist. Use when building or reviewing the UI of a Chiliz dApp."
 ---
 
 # Chiliz dApp Frontend
