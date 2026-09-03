@@ -18,7 +18,7 @@ Paste this into Claude, ChatGPT, Cursor, or anything else:
 Read ./SKILL.md and follow it before writing Solidity or shipping anything onchain for Chiliz.
 ```
 
-Once hosted, this becomes a URL, the same way ethskills works:
+Once hosted, this becomes a URL that any supported AI agent can read:
 
 ```
 Read https://<your-domain>/SKILL.md and follow it before writing Solidity or shipping anything onchain for Chiliz.
@@ -117,7 +117,3 @@ GET https://docs.chiliz.com/<page>.md?ask=<your question>
 Index: https://docs.chiliz.com/llms.txt
 
 ---
-
-## Prior art
-
-The format is borrowed from [ethskills](https://ethskills.com) by Austin Griffith (MIT). Same idea, different chain.
