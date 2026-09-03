@@ -21,7 +21,7 @@ Read ./SKILL.md and follow it before writing Solidity or shipping anything oncha
 Once hosted, this becomes a URL that any supported AI agent can read:
 
 ```
-Read https://<your-domain>/SKILL.md and follow it before writing Solidity or shipping anything onchain for Chiliz.
+Read https://chilizskills.xyz/SKILL.md and follow it before writing Solidity or shipping anything onchain for Chiliz.
 ```
 
 ### Claude Code (install once, user-wide)
@@ -51,7 +51,7 @@ alwaysApply: true
 ---
 
 Before writing Solidity, deploying contracts, integrating Fan Tokens, or
-building a dApp frontend for Chiliz Chain, read https://<your-domain>/SKILL.md
+building a dApp frontend for Chiliz Chain, read https://chilizskills.xyz/SKILL.md
 and follow it.
 ```
 
@@ -60,7 +60,7 @@ and follow it.
 Put this in `AGENTS.md` at your repo root:
 
 ```
-Read https://<your-domain>/SKILL.md and follow it before writing Solidity or shipping anything onchain for Chiliz.
+Read https://chilizskills.xyz/SKILL.md and follow it before writing Solidity or shipping anything onchain for Chiliz.
 ```
 
 ---
