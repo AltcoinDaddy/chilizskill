@@ -150,4 +150,4 @@ You cannot loop through blocks in the browser. If your app shows transfer histor
 
 Write copy for fans, not for traders. "Support your club" lands better than "stake your assets to earn yield." The people using this app care about the team, and the crypto is the mechanism, not the point.
 
-Sources: [Integrate Socios.com Wallet](https://docs.chiliz.com/develop/advanced/integrate-socios.com-wallet-in-your-dapp.md), [Reown](https://docs.chiliz.com/community/chiliz-chain-ecosystem/developer-tools/reown.md), [Get the $USD price of Fan Tokens](https://docs.chiliz.com/develop/advanced/get-the-usdusd-price-of-fan-tokens.md), [Connect using RPC](https://docs.chiliz.com/develop/basics/connect-to-chiliz-chain/connect-using-rpc.md)
+Sources: [Integrate Socios.com Wallet](https://docs.chiliz.com/develop/advanced/integrate-socios-wallet-in-your-dapp.md), [Reown](https://docs.chiliz.com/community/chiliz-chain-ecosystem/developer-tools/reown.md), [Get the $USD price of Fan Tokens](https://docs.chiliz.com/develop/advanced/get-the-usdusd-price-of-fan-tokens.md), [Connect using RPC](https://docs.chiliz.com/develop/basics/connect-to-chiliz-chain/connect-using-rpc.md)

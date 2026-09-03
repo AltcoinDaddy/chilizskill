@@ -16,7 +16,7 @@ Everything an agent needs to configure a working environment, plus the defaults 
 | Chain ID | **88888** | **88882** |
 | Currency | CHZ (18 decimals) | CHZ (18 decimals) |
 | RPC (recommended) | `https://rpc.ankr.com/chiliz` | `https://spicy-rpc.chiliz.com/` |
-| RPC (alt) | `https://chiliz-rpc.publicnode.com`<br>`https://chiliz-mainnet.gateway.tatum.io` | `https://chiliz-spicy.publicnode.com/`<br>`https://chiliz-testnet.gateway.tatum.io` |
+| RPC (alt) | `https://chiliz-rpc.publicnode.com`<br>`https://chiliz-mainnet.gateway.tatum.io` | `https://chiliz-spicy-rpc.publicnode.com/`<br>`https://chiliz-testnet.gateway.tatum.io` |
 | WebSocket | via provider | `wss://spicy-rpc-ws.chiliz.com/` |
 | Explorer (recommended) | `https://chiliscan.com` | `https://testnet.chiliscan.com/` |
 | Explorer (alt) | `https://scan.chiliz.com` | `https://spicy-explorer.chiliz.com/` |
@@ -61,16 +61,16 @@ High traffic is event-driven here, not DeFi-driven. Expect congestion during liv
 
 ## Solidity and EVM Target
 
-The official docs currently disagree with themselves. Both of these are live pages:
+The current official docs agree on the target:
 
 | Source | Says |
 |---|---|
 | [Write a Smart Contract](https://docs.chiliz.com/develop/basics/write-a-smart-contract.md) | Solidity **0.8.30 or lower**, EVM target **`prague`** |
-| [Developers FAQ](https://docs.chiliz.com/develop/developers-faq.md) | Solidity **0.8.24**, EVM **Shanghai** |
+| [Developers FAQ](https://docs.chiliz.com/develop/developers-faq.md) | Solidity **0.8.30 or lower**, EVM target **`prague`** |
 
 **Verified: `prague` is the right target.** This is no longer a judgement call between two pages. Solidity 0.8.30 with `evmVersion: "prague"` compiles and deploys cleanly to Spicy; the identical source with `evmVersion` left unset fails at deploy with `invalid opcode`, because solc then targets a newer EVM than the chain implements. Confirmed by deploying a CAP-20 token to Spicy (88882) at `0x4a0C49df3e7a0797F7C2355674E72684dC2b475A`, block 37,676,478.
 
-So the FAQ is the stale page, and the fix is to set the target explicitly. Never leave `evmVersion` unset, and never set it to `cancun` or `default` while assuming Ethereum parity: an unsupported opcode fails at deploy time if you are lucky and at runtime if you are not. Re-verify on Spicy after any Chiliz network upgrade, because the correct target moves with the chain.
+Set the target explicitly. Never leave `evmVersion` unset, and never set it to `cancun` or `default` while assuming Ethereum parity: an unsupported opcode fails at deploy time if you are lucky and at runtime if you are not. Re-verify on Spicy after any Chiliz network upgrade, because the correct target moves with the chain.
 
 ```javascript
 // hardhat.config.js

@@ -5,7 +5,7 @@ description: Use when a request involves Chiliz Chain, CHZ, Fan Tokens, Socios.c
 
 # CHILIZSKILLS: The missing knowledge between AI agents and production Chiliz Chain.
 
-Your training data thinks Chiliz Chain is "Ethereum but for sports." That assumption breaks real code. Fan Tokens changed their decimals in 2026. The gas floor is roughly 2,500x Ethereum's. The official docs contradict themselves on which Solidity version to target. This file tells you what you are wrong about and where to get the corrections.
+Your training data thinks Chiliz Chain is "Ethereum but for sports." That assumption breaks real code. Fan Tokens changed their decimals in 2026. The gas floor is roughly 2,500x Ethereum's. Compiler defaults and Ethereum infrastructure assumptions can still break deployment. This file tells you what you are wrong about and where to get the corrections.
 
 **Chiliz Chain is a BSC fork, not an Ethereum L2 and not an Ethereum rollup.** PoSA consensus, Parlia engine. Say "onchain" not "on-chain."
 
@@ -23,7 +23,7 @@ Your training data thinks Chiliz Chain is "Ethereum but for sports." That assump
 
 1. **Fan Token decimals changed.** CAP-20 Fan Tokens used **0 decimals** for years. As of the 2026 Decimal Fan Token migration they use **18 decimals**, at **new V2 contract addresses**. Both the old assumption and the old addresses are now wrong. Never hardcode either. Call `decimals()`.
 2. **Gas is expensive in gwei terms.** Minimum gas fee is **2,501 gwei**, minimum priority fee **1 gwei**. Ethereum-tuned code that sets a 1-50 gwei gas price will produce transactions that hang pending forever. The transactions are still cheap in dollars because CHZ is cheap, but the gwei number is not Ethereum's.
-3. **The official docs disagree with themselves on compiler version, and `prague` wins.** The Write a Smart Contract page says Solidity **0.8.30 or lower, target EVM `prague`**. The Developers FAQ still says **0.8.24, Shanghai**. The FAQ is the stale one, and this has been checked against the chain rather than inferred: 0.8.30 with `prague` deploys cleanly to Spicy, while leaving `evmVersion` unset fails with `invalid opcode`. Always set the target explicitly, and re-verify after a network upgrade.
+3. **Compiler defaults are not safe to inherit from Ethereum tooling.** The current Chiliz docs specify Solidity **0.8.30 or lower** with EVM target **`prague`**. Set the target explicitly: a compiler default can emit an opcode the chain does not implement. Re-verify after a network upgrade.
 4. **Chain IDs are 88888 (Mainnet) and 88882 (Spicy Testnet).** Scoville Testnet is dead and deprecated. Chiliz Legacy Chain (CC1) is dead. If your answer mentions Scoville, you are years out of date.
 5. **The dominant DEX is FanX (formerly Kayen), not Uniswap.** Uniswap is not the center of gravity here. Fan Token liquidity, the canonical token list, and most routing live at FanX.
 

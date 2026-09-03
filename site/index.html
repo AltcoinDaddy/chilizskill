@@ -231,7 +231,7 @@ footer{border-top:1px solid var(--line);padding:44px 0 56px;color:var(--dimmer);
         </div>
         <div class="fix-right">
           <p class="tag yes">Actually</p>
-          <p>The Chiliz docs contradict themselves here. The contract guide says <strong>0.8.30 with prague</strong>, the FAQ still says 0.8.24 with Shanghai. The FAQ is the stale page, and this one has been settled by deploying: <strong>prague</strong> works on Spicy, and leaving <code>evmVersion</code> unset reverts with <code>invalid opcode</code>.</p>
+          <p>The current Chiliz docs specify <strong>Solidity 0.8.30 or lower</strong> with EVM target <strong>prague</strong>. Set <code>evmVersion</code> explicitly: leaving it unset can emit an unsupported opcode and revert with <code>invalid opcode</code>.</p>
         </div>
       </div>
       <div class="fix-row">

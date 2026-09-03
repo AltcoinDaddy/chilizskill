@@ -49,4 +49,4 @@ cast chain-id --rpc-url https://spicy-rpc.chiliz.com/
 cast call <TOKEN> "decimals()(uint8)" --rpc-url https://rpc.ankr.com/chiliz
 ```
 
-Sources: [Integrate Socios.com Wallet](https://docs.chiliz.com/develop/advanced/integrate-socios.com-wallet-in-your-dapp.md), [Reown on Chiliz](https://docs.chiliz.com/community/chiliz-chain-ecosystem/developer-tools/reown.md), [Chiliz RPC configuration](https://docs.chiliz.com/develop/basics/connect-to-chiliz-chain/connect-using-rpc.md), [Frontend rules](../frontend/SKILL.md)
+Sources: [Integrate Socios.com Wallet](https://docs.chiliz.com/develop/advanced/integrate-socios-wallet-in-your-dapp.md), [Reown on Chiliz](https://docs.chiliz.com/community/chiliz-chain-ecosystem/developer-tools/reown.md), [Chiliz RPC configuration](https://docs.chiliz.com/develop/basics/connect-to-chiliz-chain/connect-using-rpc.md), [Frontend rules](../frontend/SKILL.md)

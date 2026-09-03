@@ -18,7 +18,7 @@ What is actually integrated, versus what you assume works because the chain is E
 | **thirdweb** | Documented, supports both 88888 and 88882. Dashboard and CLI deploys, strong for NFTs. |
 | **Foundry** | Works (EVM is EVM), but not in the official docs. Set `evm_version` explicitly or you will hit unsupported opcodes. |
 
-Configure the compiler target carefully, and always set it explicitly. The docs contradict themselves: the Write a Smart Contract page says Solidity 0.8.30 or lower with EVM target `prague`, the Developers FAQ still says 0.8.24 with Shanghai. `prague` is correct, verified by deploying to Spicy. Leaving `evmVersion` unset is the trap: solc picks its own newest default, emits an opcode the chain does not implement, and the deployment reverts with `invalid opcode`.
+Configure the compiler target carefully, and always set it explicitly. The current docs specify Solidity 0.8.30 or lower with EVM target `prague`. Leaving `evmVersion` unset is the trap: solc picks its own newest default, emits an opcode the chain does not implement, and the deployment can revert with `invalid opcode`.
 
 ---
 

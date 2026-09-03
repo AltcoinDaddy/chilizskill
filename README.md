@@ -92,7 +92,7 @@ This is a **delta file**, not a tutorial. Every line exists because agents get t
 
 Three rules for contributions:
 
-1. **Only include corrections.** "Chiliz is EVM-compatible" is not a correction. "The docs contradict themselves on compiler version and the FAQ is the stale one" is.
+1. **Only include corrections.** "Chiliz is EVM-compatible" is not a correction. "Ethereum compiler defaults can emit unsupported opcodes; set the Chiliz EVM target explicitly" is.
 2. **Every fact needs a source and a verify step.** Facts rot. Link the primary source and include a command the agent can run itself, like `cast call <ADDR> "decimals()(uint8)"`.
 3. **Small and sharp beats big and padded.** Eight useful skills are better than twenty thin ones.
 
