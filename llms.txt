@@ -1,0 +1,31 @@
+# CHILIZSKILLS
+
+> An open-source, AI-readable developer knowledge base for building on Chiliz Chain.
+
+ChilizSkills provides practical guidance for developers and AI coding tools working with Chiliz Chain, CHZ, Fan Tokens, Socios Wallet, DeFi, bridging, testing, indexing, and frontend development.
+
+## Start here
+
+- [Main skill index](https://chilizskills.xyz/SKILL.md): Read this first before writing Solidity or shipping anything on Chiliz Chain.
+- [Ship](https://chilizskills.xyz/ship/SKILL.md): Move from an idea to a tested and verified Chiliz dApp.
+- [Chain basics](https://chilizskills.xyz/chain-basics/SKILL.md): RPCs, chain IDs, gas, compiler targets, consensus, and testnets.
+
+## Skills
+
+- [Fan Tokens](https://chilizskills.xyz/fan-tokens/SKILL.md): CAP-20, decimals, migrations, addresses, staking, and wCHZ.
+- [Why Chiliz](https://chilizskills.xyz/why/SKILL.md): When Chiliz Chain is a good fit and the tradeoffs to consider.
+- [Security](https://chilizskills.xyz/security/SKILL.md): Chiliz-specific risks and pre-deployment checks.
+- [Addresses](https://chilizskills.xyz/addresses/SKILL.md): Verified system contracts, tokens, and endpoints.
+- [Tools](https://chilizskills.xyz/tools/SKILL.md): Hardhat, Remix, verification, oracles, and indexers.
+- [Frontend](https://chilizskills.xyz/frontend/SKILL.md): Wallet connections, gas handling, approvals, and dApp UX.
+- [LayerZero and bridging](https://chilizskills.xyz/layerzero-bridging/SKILL.md): OFT routes, endpoints, peers, and bridge safety.
+- [FanX and DeFi](https://chilizskills.xyz/fanx-defi/SKILL.md): Liquidity, swaps, allowances, slippage, and pricing.
+- [Indexing](https://chilizskills.xyz/indexing/SKILL.md): Events, holders, pagination, activity feeds, and reorgs.
+- [Testing and QA](https://chilizskills.xyz/testing-qa/SKILL.md): Spicy testing, gas checks, address verification, and release gates.
+- [Wallets](https://chilizskills.xyz/wallets/SKILL.md): Socios Wallet, Reown, network switching, approvals, and transaction UX.
+
+## Project links
+
+- [Website](https://chilizskills.xyz/)
+- [Source code](https://github.com/AltcoinDaddy/chilizskill)
+- [Suggest a topic](https://github.com/AltcoinDaddy/chilizskill/issues/new?title=Topic%20suggestion)
